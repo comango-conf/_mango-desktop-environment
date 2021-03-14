@@ -1,3 +1,5 @@
 app-admin/bitwarden-desktop-bin
 x11-terms/alacritty
 media-sound/pavucontrol
+x11-base/xorg-server
+x11-base/xorg-drivers
