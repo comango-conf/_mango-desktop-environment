@@ -24,7 +24,7 @@ font:
   bold_italic:
     family: monospace
 
-  size: 10
+  size: 8
 
 colors:
   # Default colors
