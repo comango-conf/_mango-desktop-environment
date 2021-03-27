@@ -20,6 +20,9 @@ fi
 source $HOME/.profile 2>/dev/null
 
 
+HISTCONTROL="erasedups:ignoredups"
+stty -ixon
+
 
 
 reset="\[\e[00m\]"

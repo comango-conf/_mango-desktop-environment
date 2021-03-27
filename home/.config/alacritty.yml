@@ -70,7 +70,7 @@ colors:
 background_opacity: .95
 
 cursor:
-  style: Underline
+  style: Beam
 
   unfocused_hollow: false
 
