@@ -50,26 +50,27 @@ underline="\[\e[4m\]"
 
 
 
-primary="`tput setaf 16`"
-alert="`tput setaf 18`"
+primary="\[`tput setaf 16`\]"
+secondary="\[`tput setaf 17`\]"
+alert="\[`tput setaf 18`\]"
 
 
 function parse_git_branch {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's:* \(.*\):\[\1\]:'
 }
 export -f parse_git_branch
 
 
 function create_prompt {
   PS1="\n"
-  PS1+="$dgray\W $red$(parse_git_branch)$bold "
+  PS1+="$dgray\W $secondary$(parse_git_branch)$bold "
 
   # color pompt symbol depending on user group
   case $(groups) in
       *root*)
-        PS1+="$red";;
-      *wheel*|*sudo*)
         PS1+="$alert";;
+      *wheel*|*sudo*)
+        PS1+="$primary";;
       *);;
   esac
 
