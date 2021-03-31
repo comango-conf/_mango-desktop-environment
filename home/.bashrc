@@ -10,8 +10,8 @@
 # past this point for scp and rcp, and it's important to refrain from
 # outputting anything in those cases.
 if [[ $- != *i* ]] ; then
-	# Shell is non-interactive.  Be done now!
-	return
+  # Shell is non-interactive.  Be done now!
+    return
 fi
 
 
@@ -50,6 +50,10 @@ underline="\[\e[4m\]"
 
 
 
+primary="`tput setaf 16`"
+alert="`tput setaf 18`"
+
+
 function parse_git_branch {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -65,7 +69,7 @@ function create_prompt {
       *root*)
         PS1+="$red";;
       *wheel*|*sudo*)
-        PS1+="$cyan";;
+        PS1+="$alert";;
       *);;
   esac
 

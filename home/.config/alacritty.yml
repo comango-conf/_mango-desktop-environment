@@ -5,8 +5,8 @@ env:
    TERM: xterm-256color
 window:
   padding:
-    x: 25
-    y: 25
+    x: 10
+    y: 10
 
     dynamic_padding:  true
     decoration: none
@@ -60,12 +60,12 @@ colors:
     white:   '0x<#{WHITE}#>'
 
   indexed_colors:
-    - { index: 16, color: '0xf78c6c' }
-    - { index: 17, color: '0xff5370' }
-    - { index: 18, color: '0x303030' }
-    - { index: 19, color: '0x353535' }
-    - { index: 20, color: '0xb2ccd6' }
-    - { index: 21, color: '0xeeffff' }
+    - { index: 16, color: '0x<#{PRIMARY}#>' }
+    - { index: 17, color: '0x<#{SECONDARY}#>' }
+    - { index: 18, color: '0x<#{ALERT}#>' }
+#    - { index: 19, color: '0x353535' }
+#    - { index: 20, color: '0xb2ccd6' }
+#    - { index: 21, color: '0xeeffff' }
 
 background_opacity: .95
 
