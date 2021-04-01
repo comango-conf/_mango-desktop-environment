@@ -50,6 +50,7 @@ underline="\[\e[4m\]"
 
 
 
+foreground_alt="\[`tput setaf 7`\]"
 primary="\[`tput setaf 16`\]"
 secondary="\[`tput setaf 17`\]"
 alert="\[`tput setaf 18`\]"
@@ -63,7 +64,7 @@ export -f parse_git_branch
 
 function create_prompt {
   PS1="\n"
-  PS1+="$dgray\W $secondary$(parse_git_branch)$bold "
+  PS1+="$foreground_alt\W $secondary$(parse_git_branch)$bold "
 
   # color pompt symbol depending on user group
   case $(groups) in
