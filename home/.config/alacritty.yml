@@ -29,35 +29,35 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x<#{BLACK}#>'
-    foreground: '0x<#{WHITE}#>'
+    background: '0x<#{BACKGROUND}#>'
+    foreground: '0x<#{FOREGROUND}#>'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x<#{DARK_GRAY}#>'
+    text: '0x<#{WHITE}#>'
     cursor: '0x<#{WHITE}#>'
 
   # Normal colors
   normal:
-    black:   '0x<#{BLACK}#>'
+    black:   '0x<#{BACKGROUND}#>'
     red:     '0x<#{RED}#>'
     green:   '0x<#{GREEN}#>'
     yellow:  '0x<#{YELLOW}#>'
     blue:    '0x<#{BLUE}#>'
     magenta: '0x<#{MAGENTA}#>'
     cyan:    '0x<#{CYAN}#>'
-    white:   '0x<#{LIGHT_GRAY}#>'
+    white:   '0x<#{FOREGROUND_ALT}#>'
 
   # Bright colors
   bright:
-    black:   '0x<#{DARK_GRAY}#>'
+    black:   '0x<#{BACKGROUND_ALT}#>'
     red:     '0x<#{RED}#>'
     green:   '0x<#{GREEN}#>'
     yellow:  '0x<#{YELLOW}#>'
     blue:    '0x<#{BLUE}#>'
     magenta: '0x<#{MAGENTA}#>'
     cyan:    '0x<#{CYAN}#>'
-    white:   '0x<#{WHITE}#>'
+    white:   '0x<#{FOREGROUND}#>'
 
   indexed_colors:
     - { index: 16, color: '0x<#{PRIMARY}#>' }
@@ -67,7 +67,7 @@ colors:
 #    - { index: 20, color: '0xb2ccd6' }
 #    - { index: 21, color: '0xeeffff' }
 
-background_opacity: .95
+background_opacity: <#{TERM_OPACITY}#>
 
 cursor:
   style: Beam
