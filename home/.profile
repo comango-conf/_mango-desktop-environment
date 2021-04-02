@@ -5,7 +5,7 @@ export EDITOR="wsed"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 
-export GTK_THEME=Adapta:dark
+#export GTK_THEME=Adapta:dark
 
 export PATH="~/.local/bin:$PATH"
 
