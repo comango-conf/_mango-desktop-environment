@@ -8,7 +8,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 export PATH="~/.local/bin:$PATH"
 
-export SPICETIFY_INSTALL="/home/hannah/spicetify-cli"
+export SPICETIFY_INSTALL="/home/hannah/.spicetify"
 export PATH="$SPICETIFY_INSTALL:$PATH"
 
 export DENO_INSTALL="/home/hannah/.deno"
