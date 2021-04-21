@@ -1,0 +1,17 @@
+#!/bin/bash
+
+export red="`tput setaf 1`"
+export green="`tput setaf 2`"
+export yellow="`tput setaf 3`"
+export blue="`tput setaf 4`"
+export cyan="`tput setaf 6`"
+export reset="`tput sgr0`"
+
+
+
+
+echo "${red}text in all colors!!${reset}"
+echo "${green}text in all colors!!${reset}"
+echo "${yellow}text in all colors!!${reset}"
+echo "${blue}text in all colors!!${reset}"
+echo "${cyan}text in all colors!!${reset}"
