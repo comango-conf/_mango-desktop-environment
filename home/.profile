@@ -4,6 +4,8 @@ export EDITOR="wsed"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export JAVA_HOME="/opt/java/jdk-16.0.1+9"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 
 export PATH="~/.local/bin:$PATH"
