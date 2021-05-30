@@ -13,4 +13,5 @@ dropbox &
 discord &
 /opt/Element/element-desktop &
 /opt/Signal/signal-desktop &
+/opt/whatsapp-desktop/WhatsApp &
 thunderbird &
