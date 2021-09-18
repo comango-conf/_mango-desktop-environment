@@ -81,5 +81,5 @@ function create_prompt {
 export -f create_prompt
 export PROMPT_COMMAND="create_prompt"
 
-neofetch --kitty --source .face --size 18% --colors 16 15 15 16 15 15 15
-# cbonsai -pm "$(fortune)"
+neofetch --colors 16 15 15 16 15 15 15
+# neofetch --kitty --source .face --size 18% --colors 16 15 15 16 15 15 15
