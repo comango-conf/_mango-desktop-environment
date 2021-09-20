@@ -81,5 +81,8 @@ function create_prompt {
 export -f create_prompt
 export PROMPT_COMMAND="create_prompt"
 
-neofetch --colors 16 15 15 16 15 15 15 --ascii_colors 16 7 8 8 8 8
-# neofetch --kitty --source .face --size 18% --colors 16 15 15 16 15 15 15
+if [[ $TERMINFO == *"kitty"* ]]; then
+    neofetch --kitty --source .face --size 18% --colors 16 15 15 16 15 15 15
+else
+    neofetch --colors 16 15 15 16 15 15 15 --ascii_colors 16 7 8 8 8 8
+fi
