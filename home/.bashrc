@@ -82,7 +82,7 @@ export -f create_prompt
 export PROMPT_COMMAND="create_prompt"
 
 if [[ $TERMINFO == *"kitty"* ]]; then
-    neofetch --kitty --source .face --size 18% --colors 16 15 15 16 15 15 15
+    neofetch --kitty --source .face --size 36% --colors 16 15 15 16 15 15 15
 else
     neofetch --colors 16 15 15 16 15 15 15 --ascii_colors 16 7 8 8 8 8
 fi
