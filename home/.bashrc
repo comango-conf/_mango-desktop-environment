@@ -18,7 +18,7 @@ fi
 # Put your fun stuff here.
 
 source $HOME/.profile 2>/dev/null
-
+source /etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh
 
 HISTCONTROL="erasedups:ignoredups"
 stty -ixon
@@ -81,8 +81,8 @@ function create_prompt {
 export -f create_prompt
 export PROMPT_COMMAND="create_prompt"
 
-if [[ $TERMINFO == *"kitty"* ]]; then
-    neofetch --kitty --source .face --size 330px --colors 16 15 15 16 15 15 15
-else
-    neofetch --colors 16 15 15 16 15 15 15 --ascii_colors 16 7 8 8 8 8
-fi
+# if [[ $TERMINFO == *"kitty"* ]]; then
+#    neofetch --kitty --source .face --size 330px --colors 16 15 15 16 15 15 15
+# else
+#     neofetch --colors 16 15 15 16 15 15 15 --ascii_colors 16 7 8 8 8 8
+# fi
