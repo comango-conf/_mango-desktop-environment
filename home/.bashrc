@@ -18,7 +18,6 @@ fi
 # Put your fun stuff here.
 
 source $HOME/.profile 2>/dev/null
-source /etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh
 
 HISTCONTROL="erasedups:ignoredups"
 stty -ixon
