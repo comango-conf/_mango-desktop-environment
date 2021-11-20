@@ -16,6 +16,9 @@ export PATH="$SPICETIFY_INSTALL:$PATH"
 export DENO_INSTALL="/home/hannah/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+export PATH=~/.npm-packages/bin:$PATH
+export NODE_PATH=~/.npm-packages/lib/node_modules
+
 
 
 alias grep='grep --color'
