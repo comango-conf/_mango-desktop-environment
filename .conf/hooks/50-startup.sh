@@ -5,12 +5,12 @@
 
 # desktop environment
 xsetroot -cursor_name left_ptr
-pulseaudio --start &
+# pulseaudio --start &
 
 
 
 # desktop applications
-dropbox &
+# dropbox &
 discord &
 /opt/Element/element-desktop &
 which signal-desktop &> /dev/null && signal-desktop &
