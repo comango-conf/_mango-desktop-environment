@@ -2,5 +2,5 @@
 
 #HOOKS INTO wminit
 
-redshift -x
-redshift -O 4000k &
+#redshift -x
+#redshift -O 4000k &
