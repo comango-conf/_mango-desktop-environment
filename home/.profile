@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source /etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh
-
 export EDITOR="wsed"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
