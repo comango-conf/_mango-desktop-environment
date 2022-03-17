@@ -22,6 +22,8 @@ source $HOME/.profile 2>/dev/null
 HISTCONTROL="erasedups:ignoredups"
 stty -ixon
 
+# terminal emulator name
+emulator=$(ps -ho "%c"  -p $PPID)
 
 
 reset="\[\e[00m\]"
@@ -48,12 +50,20 @@ dim="\[\e[2m\]"
 underline="\[\e[4m\]"
 
 
-
-foreground_alt="\[`tput setaf 7`\]"
-primary="\[`tput setaf 16`\]"
-secondary="\[`tput setaf 17`\]"
-alert="\[`tput setaf 18`\]"
-
+case "$emulator" in
+    *kitty|alacritty*)
+        foreground_alt="\[`tput setaf 7`\]"
+        primary="\[`tput setaf 16`\]"
+        secondary="\[`tput setaf 17`\]"
+        alert="\[`tput setaf 18`\]"
+    ;;
+    *)
+        foreground_alt="\[`tput setaf 7`\]"
+        primary="$lcyan"
+        secondary="$lmagenta"
+        alert="$lred"
+    ;;
+esac
 
 function parse_git_branch {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's:* \(.*\):\[\1\]:'
@@ -70,7 +80,7 @@ function create_prompt {
       *root*)
         PS1+="$alert";;
       *wheel*|*sudo*)
-        PS1+="$primary";;
+            PS1+="$primary";;
       *);;
   esac
 
