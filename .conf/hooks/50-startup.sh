@@ -10,7 +10,7 @@ xsetroot -cursor_name left_ptr
 
 
 # desktop applications
-# dropbox &
+dropbox &
 discord &
 /opt/Element/element-desktop &
 which signal-desktop &> /dev/null && signal-desktop &
