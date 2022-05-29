@@ -19,7 +19,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH=~/.npm-packages/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
 
-
+export PATH=~/.local/share/flutter/bin:$PATH
 
 alias grep='grep --color'
 alias ls='ls --color=auto --group-directories-first'
