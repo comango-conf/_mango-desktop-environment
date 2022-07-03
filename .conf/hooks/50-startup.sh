@@ -11,5 +11,4 @@ xsetroot -cursor_name left_ptr
 dropbox &
 discord &
 which signal-desktop &> /dev/null && signal-desktop &
-/opt/whatsapp-desktop/WhatsApp &
 which thunderbird &> /dev/null && thunderbird &
