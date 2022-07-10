@@ -10,6 +10,8 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 export PATH="~/.local/bin:$PATH"
 
+export LUA_PATH=";;$HOME/.local/share/lua/?.lua;$HOME/.local/share/lua/?/init.lua"
+
 export SPICETIFY_INSTALL="/home/hannah/.spicetify"
 export PATH="$SPICETIFY_INSTALL:$PATH"
 
