@@ -39,3 +39,5 @@ alias grep='grep --color'
 alias ls='ls --color=auto --group-directories-first'
 alias tree='tree --dirsfirst -I .git'
 alias open='xdg-open'
+
+alias nix='nix --extra-experimental-features nix-command --extra-experimental-features flakes'
