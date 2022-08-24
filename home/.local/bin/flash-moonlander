@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+path=/tmp/moonlander-firmware.bin
+
+wget https://oryx.zsa.io/63GbE/latest/binary -O $path
+
+wally-cli $path
+
