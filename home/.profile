@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export EDITOR="wsed"
+export EDITOR="vi"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
