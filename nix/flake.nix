@@ -19,7 +19,7 @@
 
       };
     in {
-      nixosConfigurations."cheesecake" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."<#{DEVICE_NAME}#>" = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { lib = nixpkgs.lib; };
         modules = [
