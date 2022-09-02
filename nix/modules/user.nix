@@ -12,16 +12,17 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "openrazer" "plugdev" "dialout" ];
     packages = with pkgs; [
+      discord
       dropbox
       firefox
       gh
       kitty
-      thunderbird
-      vscode.fhs
-      discord
       signal-desktop
-      wally-cli
       spotify
+      thunderbird
+      ungoogled-chromium
+      vscode.fhs
+      wally-cli
     ];
   };
 }

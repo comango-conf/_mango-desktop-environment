@@ -53,17 +53,17 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ungoogled-chromium
-    wget
-    git
-    rofi
-    killall
-    bitwarden
-    htop
-    glances
     bind
+    bitwarden
+    git
+    glances
+    htop
+    killall
+    nix-index
+    rofi
     unstable.polychromatic
     tree
+    wget
   ];
 
   fonts.fonts = with pkgs; [
