@@ -65,6 +65,7 @@ in
     unstable.polychromatic
     tree
     wget
+    xsettingsd
   ];
 
   fonts.fonts = with pkgs; [
