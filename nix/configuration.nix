@@ -18,12 +18,11 @@ in
   nixpkgs.config.allowUnfree = true;
 
 
-  nixpkgs.overlays = [ (self: super: {
-    linuxPackages = super.linuxPackages.extend (self: super: {
-      openrazer = pkgs.unstable.linuxPackages.openrazer;
-    });
-  })];
-
+#  nixpkgs.overlays = [ (self: super: {
+#    linuxPackages = super.linuxPackages.extend (self: super: {
+#      openrazer = pkgs.unstable.linuxPackages.openrazer;
+#    });
+#  })];
   
   imports = [ ./hardware-configuration.nix ]
             ++ (nixFilesIn ./modules);
