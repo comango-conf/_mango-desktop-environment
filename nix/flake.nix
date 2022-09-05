@@ -4,9 +4,10 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-22.05"; 
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; 
+    snowcake.url = "github:HanLap/snowcake/main";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake }:
     let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
@@ -16,7 +17,7 @@
         #   inherit system;
         #   config.allowUnfree = true;
         # };
-
+        snowcake = snowcake.legacyPackages.${prev.system};
       };
     in {
       nixosConfigurations."<#{DEVICE_NAME}#>" = nixpkgs.lib.nixosSystem {
