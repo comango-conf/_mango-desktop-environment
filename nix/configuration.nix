@@ -62,9 +62,11 @@ in
     nix-index
     rofi
     unstable.polychromatic
+    unzip
     tree
     wget
     xsettingsd
+    zip
   ];
 
   fonts.fonts = with pkgs; [
