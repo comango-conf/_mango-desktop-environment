@@ -65,6 +65,7 @@ in
     unzip
     tree
     wget
+    xprop
     xsettingsd
     zip
   ];
