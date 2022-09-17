@@ -2,7 +2,8 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-22.05"; 
+    # nixpkgs.url = "nixpkgs/nixos-22.05"; 
+    nixpkgs.url = "nixpkgs/nixos-unstable"; 
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; 
     snowcake.url = "github:HanLap/snowcake/main";
   };
