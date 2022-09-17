@@ -61,7 +61,7 @@ in
     killall
     nix-index
     rofi
-    unstable.polychromatic
+    polychromatic
     unzip
     tree
     wget

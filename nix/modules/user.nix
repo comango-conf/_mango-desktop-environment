@@ -21,7 +21,7 @@
       spotify
       thunderbird
       ungoogled-chromium
-      unstable.vscode.fhs
+      vscode.fhs
       wally-cli
     ];
   };
