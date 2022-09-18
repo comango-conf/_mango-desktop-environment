@@ -48,6 +48,7 @@ in
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.bluetooth.enable = true;
 
 
   # List packages installed in system profile. To search, run:
@@ -93,7 +94,6 @@ in
 
   services.gnome.gnome-keyring.enable = true;
 
-  services.bluetooth.enable = true;
 
   services.udev.extraRules = ''
     # Rules for Oryx web flashing and live training
@@ -121,6 +121,7 @@ in
     MODE:="0666", \
     SYMLINK+="stm32_dfu"
   '';
+
 
   programs.steam = {
     enable = true;
