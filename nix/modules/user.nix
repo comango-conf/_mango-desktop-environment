@@ -19,6 +19,7 @@
       kitty
       signal-desktop
       spotify
+      texlive.combined.scheme-full
       thunderbird
       ungoogled-chromium
       vscode.fhs
