@@ -47,8 +47,8 @@ in
   services.printing.enable = true;
   services.printing.drivers = [ pkgs.hplip ];
 
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # sound.enable = true;
+  # hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
 
 
