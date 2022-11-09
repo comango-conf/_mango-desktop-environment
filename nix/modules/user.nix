@@ -17,6 +17,7 @@
       firefox
       gh
       kitty
+      python310Packages.pygments
       signal-desktop
       spotify
       texlive.combined.scheme-full
@@ -24,6 +25,7 @@
       ungoogled-chromium
       vscode.fhs
       wally-cli
+      zotero
     ];
   };
 }
