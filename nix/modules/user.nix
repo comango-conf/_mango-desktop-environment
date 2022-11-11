@@ -26,6 +26,7 @@
       vscode.fhs
       wally-cli
       zotero
+      inotify-tools
     ];
   };
 }
