@@ -27,6 +27,7 @@
       wally-cli
       zotero
       inotify-tools
+      gnumake
     ];
   };
 }
