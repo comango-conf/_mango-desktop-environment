@@ -6,9 +6,14 @@
     nixpkgs.url = "nixpkgs/nixos-unstable"; 
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; 
     snowcake.url = "github:HanLap/snowcake/main";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      # build with your own instance of nixpkgs
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland }:
     let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
