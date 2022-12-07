@@ -61,6 +61,8 @@ in
     glances
     htop
     killall
+    man-pages 
+    man-pages-posix
     nix-index
     rofi
     polychromatic
