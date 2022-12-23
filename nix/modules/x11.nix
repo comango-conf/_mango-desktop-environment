@@ -5,6 +5,8 @@
   services.xserver = {
     enable = true;
 
+    deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
+
     displayManager = {
        sddm.enable = false;
        lightdm.enable = true;
