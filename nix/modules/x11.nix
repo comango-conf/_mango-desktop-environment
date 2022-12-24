@@ -8,8 +8,8 @@
     deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
 
     displayManager = {
-       sddm.enable = false;
-       lightdm.enable = true;
+       sddm.enable = true;
+       lightdm.enable = false;
        defaultSession = "none+awesome";
     };
     desktopManager = {

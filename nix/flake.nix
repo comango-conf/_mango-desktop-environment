@@ -33,6 +33,9 @@
           # Overlays-module makes "pkgs.unstable" available in configuration.nix
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
           ./configuration.nix
+          
+          hyprland.nixosModules.default
+          {programs.hyprland.enable = true;}
         ];
       };
     };
