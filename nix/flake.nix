@@ -11,9 +11,13 @@
       # build with your own instance of nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprcontrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib }:
     let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
@@ -36,6 +40,9 @@
           
           hyprland.nixosModules.default
           {programs.hyprland.enable = true;}
+          {
+	    environment.systemPackages = [ hyprcontrib.grimblast];
+          }
         ];
       };
     };
