@@ -15,9 +15,13 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib, hyprpaper }:
     let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
@@ -41,7 +45,10 @@
           hyprland.nixosModules.default
           {programs.hyprland.enable = true;}
           {
-	    environment.systemPackages = [ hyprcontrib.grimblast];
+	    environment.systemPackages = [ 
+              hyprcontrib.packages.x86_64-linux.grimblast
+              hyprpaper.packages.x86_64-linux.hyprpaper
+            ];
           }
         ];
       };
