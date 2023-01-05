@@ -28,6 +28,7 @@
       zotero
       inotify-tools
       gnumake
+      deno
     ];
   };
 }
