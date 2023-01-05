@@ -52,7 +52,7 @@
 	    environment.systemPackages = [ 
               hyprcontrib.packages.x86_64-linux.grimblast
               hyprpaper.packages.x86_64-linux.hyprpaper
-	      hyprpaper.packages.x86_64-linux.hyprpicker
+	      hyprpicker.packages.x86_64-linux.hyprpicker
             ];
           }
         ];
