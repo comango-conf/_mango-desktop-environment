@@ -11,10 +11,10 @@
        gdm.enable = true;
        sddm.enable = false;
        lightdm.enable = false;
-       defaultSession = "none+awesome";
+#       defaultSession = "none+awesome";
     };
     desktopManager = {
-      plasma5.enable = false;
+      plasma5.enable = true;
       gnome.enable = false; 
     };
 
