@@ -7,7 +7,7 @@
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; 
     snowcake.url = "github:HanLap/snowcake/main";
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "github:HanLap/Hyprland";
       # build with your own instance of nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
     };
