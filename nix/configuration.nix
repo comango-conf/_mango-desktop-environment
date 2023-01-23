@@ -68,7 +68,7 @@ in
     man-pages 
     man-pages-posix
     nix-index
-    rofi
+    rofi-wayland
     polychromatic
     unzip
     tree
