@@ -1,5 +1,12 @@
 { pkgs, ... }:
-
+let 
+  spotifywmDesktopItem = pkgs.makeDesktopItem {
+    name = "spotifywm";
+    desktopName = "Spotify";
+    exec = "spotifywm";
+    terminal = false; 
+  };
+in
 {
   
   nixpkgs.overlays = [ (self: super: {
@@ -19,7 +26,8 @@
       kitty
       python310Packages.pygments
       signal-desktop
-      spotify
+      spotifywm
+      spotifywmDesktopItem
       texlive.combined.scheme-full
       thunderbird
       ungoogled-chromium
