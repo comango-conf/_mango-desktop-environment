@@ -7,7 +7,7 @@
       name = "vim";
       # Install plugins for example for syntax highlighting of nix files
       vimrcConfig.packages.myplugins = with pkgs.vimPlugins; {
-        start = [ vim-nix vim-lastplace indentLine sleuth detectIndent ];
+        start = [ vim-nix vim-lastplace indentLine sleuth ];
         opt = [];
       };
       vimrcConfig.customRC = ''
@@ -23,8 +23,6 @@
         set shiftwidth=2
         set softtabstop=2
         set smarttab
-
-        autocmd BufRead * DetectIndent
 
         " Turn on syntax highlighting by default
         syntax on
