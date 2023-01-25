@@ -6,9 +6,9 @@
     nixpkgs.url = "nixpkgs/nixos-unstable"; 
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; 
     snowcake.url = "github:HanLap/snowcake/main";
+    comango.url = "github:HanLap/comango/main";
     hyprland = {
       url = "github:HanLap/Hyprland";
-      # build with your own instance of nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprcontrib = {
@@ -25,12 +25,10 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib, hyprpaper, hyprpicker }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib, hyprpaper, hyprpicker, comango }@attrs:
     let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
-        #unstable = nixpkgs-unstable.legacyPackages.${prev.system};
-        # use this variant if unfree packages are needed:
         unstable = import nixpkgs-unstable {
           inherit system;
           config.allowUnfree = true;
@@ -50,9 +48,10 @@
           {programs.hyprland.enable = true;}
           {
 	    environment.systemPackages = [ 
-              hyprcontrib.packages.x86_64-linux.grimblast
-              hyprpaper.packages.x86_64-linux.hyprpaper
-	      hyprpicker.packages.x86_64-linux.hyprpicker
+              comango.legacyPackages.${system}.comango
+              hyprcontrib.packages.${system}.grimblast
+              hyprpaper.packages.${system}.hyprpaper
+	      hyprpicker.packages.${system}.hyprpicker
             ];
           }
         ];
