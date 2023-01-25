@@ -7,7 +7,7 @@
       name = "vim";
       # Install plugins for example for syntax highlighting of nix files
       vimrcConfig.packages.myplugins = with pkgs.vimPlugins; {
-        start = [ vim-nix vim-lastplace indentLine ];
+        start = [ vim-nix vim-lastplace indentLine sleuth ];
         opt = [];
       };
       vimrcConfig.customRC = ''
