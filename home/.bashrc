@@ -51,7 +51,7 @@ underline="\[\e[4m\]"
 
 
 case "$emulator" in
-    *kitty|alacritty*)
+    *kitty*|*alacritty*)
         foreground_alt="\[`tput setaf 7`\]"
         primary="\[`tput setaf 16`\]"
         secondary="\[`tput setaf 17`\]"
