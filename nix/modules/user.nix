@@ -24,6 +24,7 @@ in
       firefox
       gh
       kitty
+      lm_sensors
       python310Packages.pygments
       signal-desktop
       spotifywm
