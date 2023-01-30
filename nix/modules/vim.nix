@@ -24,6 +24,11 @@
         set softtabstop=2
         set smarttab
 
+        " dynamic cursor
+        let &t_SI = "\<Esc>[6 q"
+        let &t_SR = "\<Esc>[4 q"
+        let &t_EI = "\<Esc>[2 q"
+
         " Turn on syntax highlighting by default
         syntax on
         " ...
