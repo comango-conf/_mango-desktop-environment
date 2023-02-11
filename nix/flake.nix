@@ -7,6 +7,7 @@
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; 
     snowcake.url = "github:HanLap/snowcake/main";
     comango.url = "github:HanLap/comango/main";
+    hmm.url = "git+https://git.wyvernscale.com/boonami/hmm";
     hyprland = {
       url = "github:HanLap/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,6 +50,7 @@
           {
 	    environment.systemPackages = [ 
               comango.legacyPackages.${system}.comango
+              hmm.legacyPackages.${system}.hmm
               hyprcontrib.packages.${system}.grimblast
               hyprpaper.packages.${system}.hyprpaper
 	      hyprpicker.packages.${system}.hyprpicker
