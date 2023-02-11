@@ -26,7 +26,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib, hyprpaper, hyprpicker, comango }@attrs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib, hyprpaper, hyprpicker, hmm, comango }@attrs:
     let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
