@@ -138,6 +138,8 @@ in
 
   virtualisation.docker.enable = true;
 
+  boot.cleanTmpDir = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
