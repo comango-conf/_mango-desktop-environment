@@ -2,12 +2,19 @@
   description = "NixOS configuration";
 
   inputs = {
-    # nixpkgs.url = "nixpkgs/nixos-22.05"; 
     nixpkgs.url = "nixpkgs/nixos-unstable"; 
-    nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; 
-    snowcake.url = "github:HanLap/snowcake/main";
-    comango.url = "github:HanLap/comango/main";
-    hmm.url = "git+https://git.wyvernscale.com/boonami/hmm";
+    snowcake = {
+      url = "github:HanLap/snowcake/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    comango = {
+      url = "github:HanLap/comango/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hmm = {
+      url = "/home/hannah/repositories/hmm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland = {
       url = "github:HanLap/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,36 +33,59 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, snowcake, hyprland, hyprcontrib, hyprpaper, hyprpicker, hmm, comango }@attrs:
+  outputs = { self, nixpkgs, snowcake, hyprland, hyprcontrib, hyprpaper, hyprpicker, hmm, comango }@attrs:
     let
       system = "x86_64-linux";
-      overlay-unstable = final: prev: {
-        unstable = import nixpkgs-unstable {
-          inherit system;
-          config.allowUnfree = true;
-        };
+      pkg-overlay = final: prev: {
         snowcake = snowcake.legacyPackages.${prev.system};
+        comango = comango.legacyPackages.${prev.system};
+        hmm = hmm.legacyPackages.${prev.system};
+#        hmm = import hmm {
+#          system = prev.system;
+#          config.allowUnfree = true;
+#        };
+        hyprcontrib = hyprcontrib.packages.${prev.system};
+        hyprpaper = hyprpaper.packages.${prev.system};
+	hyprpicker = hyprpicker.packages.${prev.system};
+        hyprland = hyprland.packages.${prev.system};
       };
-    in {
+      pkgs = import nixpkgs { 
+        inherit system;
+        config = { allowUnfree = true; }; 
+        overlays = [ 
+          pkg-overlay 
+        ];
+      };
+    in
+    {
       nixosConfigurations."<#{DEVICE_NAME}#>" = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { lib = nixpkgs.lib; };
+        specialArgs = { inherit pkgs; lib = nixpkgs.lib; };
         modules = [
-          # Overlays-module makes "pkgs.unstable" available in configuration.nix
-          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+          ({ lib, ... }: { 
+#            nixpkgs = {
+#              overlays = [ pkg-overlay ]; 
+#            };
+          })
+
           ./configuration.nix
-          
+
           hyprland.nixosModules.default
+
           {programs.hyprland.enable = true;}
+
+          ({ pkgs, ... }:
           {
-	    environment.systemPackages = [ 
-              comango.legacyPackages.${system}.comango
-              hmm.legacyPackages.${system}.hmm
-              hyprcontrib.packages.${system}.grimblast
-              hyprpaper.packages.${system}.hyprpaper
-	      hyprpicker.packages.${system}.hyprpicker
+            environment.systemPackages = [ 
+              pkgs.unrar
+              pkgs.comango.comango
+              #pkgs.hmm.hmm
+              pkgs.hyprcontrib.grimblast
+              pkgs.hyprpaper.hyprpaper
+              pkgs.hyprpicker.hyprpicker
+              pkgs.hyprland.waybar-hyprland
             ];
-          }
+          })
         ];
       };
     };
