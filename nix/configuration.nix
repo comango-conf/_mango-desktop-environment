@@ -71,6 +71,7 @@ in
     rofi-wayland
     polychromatic
     unzip
+    usbutils
     tree
     wget
     xsettingsd
