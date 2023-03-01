@@ -77,9 +77,8 @@
           ({ pkgs, ... }:
           {
             environment.systemPackages = [ 
-              pkgs.unrar
               pkgs.comango.comango
-              #pkgs.hmm.hmm
+              pkgs.hmm.hmm
               pkgs.hyprcontrib.grimblast
               pkgs.hyprpaper.hyprpaper
               pkgs.hyprpicker.hyprpicker
