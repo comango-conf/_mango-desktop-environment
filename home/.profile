@@ -41,3 +41,7 @@ alias tree='tree --dirsfirst -I .git'
 alias open='xdg-open'
 
 alias nix='nix --extra-experimental-features nix-command --extra-experimental-features flakes'
+
+if which "pnpm" &>/dev/null; then
+  alias pn='pnpm'
+fi 
