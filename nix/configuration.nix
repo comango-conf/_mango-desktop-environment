@@ -72,6 +72,7 @@ in
     polychromatic
     unzip
     usbutils
+    syncthing
     tree
     wget
     xsettingsd
