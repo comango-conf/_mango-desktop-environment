@@ -140,7 +140,7 @@ in
 
   virtualisation.docker.enable = true;
 
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

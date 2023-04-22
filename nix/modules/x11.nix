@@ -14,7 +14,7 @@
        defaultSession = "hyprland";
     };
     desktopManager = {
-      plasma5.enable = false;
+      plasma5.enable = true;
       gnome.enable = false; 
     };
 
