@@ -29,7 +29,6 @@ in
       signal-desktop
       spotifywm
       spotifywmDesktopItem
-      texlive.combined.scheme-full
       thunderbird
       ungoogled-chromium
       vscode.fhs
