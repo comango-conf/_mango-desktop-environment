@@ -25,6 +25,7 @@ in
       gh
       kitty
       lm_sensors
+      obsidian
       python310Packages.pygments
       signal-desktop
       spotifywm
