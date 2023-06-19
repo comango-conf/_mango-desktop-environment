@@ -17,7 +17,7 @@ in
 
   users.users.hannah = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "openrazer" "plugdev" "dialout", "syncthing" ];
+    extraGroups = [ "wheel" "docker" "openrazer" "plugdev" "dialout" "syncthing" ];
     packages = with pkgs; [
       discord
       dropbox
