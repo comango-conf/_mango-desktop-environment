@@ -23,6 +23,7 @@ export NODE_PATH=~/.npm-packages/lib/node_modules
 
 export PATH=~/.local/share/flutter/bin:$PATH
 
+export CUPS_SERVER=numinex:631
 
 # if [ -z "$SSH_AUTH_SOCK" ]; then
 #   # Check for a currently running instance of the agent
