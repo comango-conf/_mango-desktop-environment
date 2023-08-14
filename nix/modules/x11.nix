@@ -11,11 +11,11 @@
        gdm.enable = true;
        sddm.enable = false;
        lightdm.enable = false;
-       defaultSession = "hyprland";
+       defaultSession = "gnome";
     };
     desktopManager = {
-      plasma5.enable = true;
-      gnome.enable = false; 
+      plasma5.enable = false;
+      gnome.enable = true; 
     };
 
     windowManager = {
