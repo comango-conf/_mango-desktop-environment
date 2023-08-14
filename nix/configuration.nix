@@ -111,16 +111,16 @@ in
 
     # Legacy rules for live training over webusb (Not needed for firmware v21+)
     # Rule for all ZSA keyboards
-    SUBSYSTEM=="usb", ATTR{idVendor}=="3297", GROUP="plugdev"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="3297", GROUP="plugdev"
     # Rule for the Moonlander
-    SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", GROUP="plugdev"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="3297", ATTR{idProduct}=="1969", GROUP="plugdev"
     # Rule for the Ergodox EZ
-    SUBSYSTEM=="usb", ATTR{idVendor}=="feed", ATTR{idProduct}=="1307", GROUP="plugdev"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="feed", ATTR{idProduct}=="1307", GROUP="plugdev"
     # Rule for the Planck EZ
-    SUBSYSTEM=="usb", ATTR{idVendor}=="feed", ATTR{idProduct}=="6060", GROUP="plugdev"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="feed", ATTR{idProduct}=="6060", GROUP="plugdev"
 
     # Keychron Q3
-    SUBSYSTEM=="usb", ATTR{idVendor}=="3434", ATTR{idProduct}=="0121", GROUP="plugdev"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="3434", ATTR{idProduct}=="0121", GROUP="plugdev"
 
     # Wally Flashing rules for the Ergodox EZ
     ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04[789B]?", ENV{ID_MM_DEVICE_IGNORE}="1"
