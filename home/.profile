@@ -25,6 +25,10 @@ export PATH=~/.local/share/flutter/bin:$PATH
 
 export CUPS_SERVER=numinex:631
 
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
+
 # if [ -z "$SSH_AUTH_SOCK" ]; then
 #   # Check for a currently running instance of the agent
 #   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
