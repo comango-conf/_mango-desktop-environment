@@ -70,19 +70,19 @@
 
           ./configuration.nix
 
-          hyprland.nixosModules.default
+#          hyprland.nixosModules.default
 
-          {programs.hyprland.enable = true;}
+#          {programs.hyprland.enable = true;}
 
           ({ pkgs, ... }:
           {
             environment.systemPackages = [ 
               pkgs.comango.comango
               pkgs.hmm.hmm
-              pkgs.hyprcontrib.grimblast
-              pkgs.hyprpaper.hyprpaper
-              pkgs.hyprpicker.hyprpicker
-              pkgs.hyprland.waybar-hyprland
+#              pkgs.hyprcontrib.grimblast
+#              pkgs.hyprpaper.hyprpaper
+#              pkgs.hyprpicker.hyprpicker
+#              pkgs.hyprland.waybar-hyprland
             ];
           })
         ];
