@@ -33,8 +33,6 @@ in
       thunderbird
       ungoogled-chromium
       vscode.fhs
-      wally-cli
-      zotero
       inotify-tools
       gnumake
       deno
