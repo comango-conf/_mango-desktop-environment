@@ -10,5 +10,5 @@ xsetroot -cursor_name left_ptr
 # desktop applications
 dropbox &
 discord &
-which signal-desktop &> /dev/null && signal-desktop &
+#which signal-desktop &> /dev/null && signal-desktop &
 which thunderbird &> /dev/null && thunderbird &
