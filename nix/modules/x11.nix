@@ -22,10 +22,12 @@
       awesome.enable = true;
     };
 
-    layout = "us";
-    xkbModel = "pc104";
-    xkbVariant = "";
-    xkbOptions = "compose:ralt";
+    xkb = {
+      layout = "us";
+      model = "pc104";
+      variant = "";
+      options = "compose:ralt";
+    };
   };
   
 }
