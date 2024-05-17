@@ -11,19 +11,14 @@
       url = "github:HanLap/comango/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hmm = {
-      url = "/home/hannah/repositories/hmm";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, snowcake, hmm, comango }@attrs:
+  outputs = { self, nixpkgs, snowcake, comango }@attrs:
     let
       system = "x86_64-linux";
       pkg-overlay = final: prev: {
         snowcake = snowcake.legacyPackages.${prev.system};
         comango = comango.legacyPackages.${prev.system};
-        hmm = hmm.legacyPackages.${prev.system};
 #        hmm = import hmm {
 #          system = prev.system;
 #          config.allowUnfree = true;
@@ -60,7 +55,6 @@
           {
             environment.systemPackages = [ 
               pkgs.comango.comango
-              pkgs.hmm.hmm
             ];
           })
         ];

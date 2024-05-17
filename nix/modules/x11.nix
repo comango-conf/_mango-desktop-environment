@@ -11,7 +11,7 @@
        gdm.enable = true;
        sddm.enable = false;
        lightdm.enable = false;
-       defaultSession = "hyprland";
+      # defaultSession = "hyprland";
     };
     desktopManager = {
       plasma5.enable = false;

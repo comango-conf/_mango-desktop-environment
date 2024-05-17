@@ -32,7 +32,7 @@ in
             ++ (nixFilesIn ./modules);
 
 
-  boot.loader.systemd-boot.enable = true;
+ # boot.loader.systemd-boot.enable = true;
 
   networking.hostName = "<#{DEVICE_NAME}#>";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
